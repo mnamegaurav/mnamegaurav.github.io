@@ -11,7 +11,7 @@
       var target = $(this.hash);
       target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
       if (target.length) {
-        $('#header-title').text(event.target.innerHTML)
+        $("#header-title").text(event.target.innerHTML);
         $("html, body").animate(
           {
             scrollTop: target.offset().top,
