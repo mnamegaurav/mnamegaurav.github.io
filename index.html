@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta name="description"
     content="Gaurav Sharma is a Full Stack Engineer specializing in Python, Django, Django REST Framework, React, and Next.js. Explore experience, projects, services, and contact details." />
+  <meta name="theme-color" content="#0a1020" />
   <meta name="author" content="Gaurav Sharma" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -173,7 +174,7 @@
           <span class="text-primary">SHARMA</span>
         </h1>
         <div class="subheading">
-          <strong>Full Stack Engineer</strong> | Educator | Founder |
+          <strong>Full Stack Engineer</strong> | Educator
           <br />
           <button class="my-3 px-5 btn btn-lg btn-danger rounded shadow-none" type="button" data-toggle="modal"
             data-target="#contactMeModal">Contact Me</button>
@@ -584,7 +585,7 @@
             <p class="m-0 font-weight-bold skill__title">Django</p>
           </li>
           <li class="list-inline-item">
-            <img loading="lazy" height="48" src="https://www.django-rest-framework.org/img/logo.png"
+            <img loading="lazy" height="48" class="bg-wheat" src="https://www.django-rest-framework.org/img/logo.png"
               alt="DRF" />
             <p class="m-0 font-weight-bold skill__title">DRF</p>
           </li>
@@ -691,11 +692,15 @@
         </ul>
       </div>
       <div class="col-12 img-responsive mt-5 w-100" style="overflow-x: auto">
-        <img loading="lazy" align="center"
-          src="https://github-readme-stats.vercel.app/api/top-langs?username=mnamegaurav&show_icons=true&theme=radical"
+        <img loading="lazy" align="center" id="github-top-langs-card"
+          src="https://github-readme-stats.vercel.app/api/top-langs?username=mnamegaurav&layout=compact&theme=radical&cache_seconds=21600"
+          data-fallback-sources="https://github-readme-stats-sigma-five.vercel.app/api/top-langs?username=mnamegaurav&layout=compact&theme=radical&cache_seconds=21600|https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=mnamegaurav&theme=github_dark"
+          onerror="const s=(this.dataset.fallbackSources||'').split('|').map(v=>v.trim()).filter(Boolean);const i=Number(this.dataset.fallbackIndex||0);if(i<s.length){this.dataset.fallbackIndex=String(i+1);this.src=s[i];}else{this.onerror=null;}"
           alt="Github top language statistics" />
-        <img loading="lazy"
-          src="https://github-readme-stats.vercel.app/api?username=mnamegaurav&show_icons=true&theme=radical"
+        <img loading="lazy" id="github-stats-card"
+          src="https://github-readme-stats.vercel.app/api?username=mnamegaurav&show_icons=true&theme=radical&cache_seconds=21600"
+          data-fallback-sources="https://github-readme-stats-sigma-five.vercel.app/api?username=mnamegaurav&show_icons=true&theme=radical&cache_seconds=21600|https://github-profile-summary-cards.vercel.app/api/cards/stats?username=mnamegaurav&theme=github_dark"
+          onerror="const s=(this.dataset.fallbackSources||'').split('|').map(v=>v.trim()).filter(Boolean);const i=Number(this.dataset.fallbackIndex||0);if(i<s.length){this.dataset.fallbackIndex=String(i+1);this.src=s[i];}else{this.onerror=null;}"
           alt="Github statistics" />
       </div>
     </section>
@@ -1016,19 +1021,41 @@
     }
 
     .skip-link:focus {
-      background: #fff;
-      color: #000;
+      background: #0f1a2f;
+      color: #f2f7ff;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      border-radius: 0.5rem;
       left: 1rem;
       padding: 0.5rem 0.75rem;
       top: 1rem;
     }
 
     .github-corner>svg {
-      fill: #7138bdd9;
+      fill: #3dd9c3;
       right: 0;
       top: 0;
       transform: scale(1, 1);
       position: fixed;
+    }
+
+    @media only screen and (max-width: 991.98px) {
+      #sideNav .navbar-collapse {
+        max-height: calc(100vh - 4.25rem);
+        overflow-y: auto;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      #sideNav .navbar-nav.full-screen-mobile {
+        min-height: auto;
+        align-items: stretch;
+        text-align: left;
+      }
+
+      #sideNav .navbar-nav .nav-item .nav-link {
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+      }
     }
 
     @media only screen and (max-width: 576px) {
